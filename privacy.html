@@ -4,41 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad - Health Score Cartera KPI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #1e293b; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        h2 { color: #334155; margin-top: 30px; }
-        p { margin-bottom: 15px; }
-        .footer { margin-top: 50px; font-size: 0.9em; color: #64748b; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 20px; }
+        :root {
+            --primary: #1e293b;
+            --accent: #0078d4;
+            --text: #334155;
+            --bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .document-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .nav-back {
+            margin-bottom: 30px;
+        }
+
+        .btn-back {
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #f1f5f9;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+        }
+
+        .update-date {
+            color: #64748b;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-top: 40px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #475569;
+        }
+
+        .highlight-box {
+            background-color: #f0f9ff;
+            border: 1px solid #e0f2fe;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .contact-info {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .document-container { padding: 30px 20px; }
+            h1 { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
-    <h1>Política de Privacidad</h1>
-    <p><strong>Última actualización:</strong> 5 de febrero de 2026</p>
-    
-    <p>Esta política de privacidad se aplica al objeto visual personalizado de Power BI <strong>"Health Score Cartera KPI"</strong> (en adelante, "el Visual"), desarrollado por el <strong>Ing. Juancito Peña Vizcaíno</strong>.</p>
 
-    <h2>1. Recopilación de Datos</h2>
-    <p>El Visual no recopila, almacena ni transmite ningún tipo de información personal, datos identificables o datos del negocio del usuario fuera del entorno de Microsoft Power BI.</p>
+    <div class="document-container">
+        <div class="nav-back">
+            <a href="index.html" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Volver al Soporte
+            </a>
+        </div>
 
-    <h2>2. Procesamiento de Datos</h2>
-    <p>Todos los cálculos y visualizaciones realizados por el Visual se ejecutan localmente en el dispositivo del usuario dentro de la sesión activa de Power BI. Los datos proporcionados por el modelo de datos de Power BI se utilizan exclusivamente para renderizar los elementos gráficos (Gauge, tarjetas líquidas y etiquetas).</p>
+        <header>
+            <h1>Política de Privacidad</h1>
+            <span class="update-date">Última actualización: 5 de febrero de 2026</span>
+        </header>
+        
+        <p>Esta política de privacidad describe cómo se manejan los datos en el objeto visual personalizado de Power BI <strong>"Health Score Cartera KPI"</strong>, desarrollado por el <strong>Ing. Juancito Peña Vizcaíno</strong>.</p>
 
-    <h2>3. Servicios de Terceros</h2>
-    <p>El Visual no realiza llamadas a APIs externas ni servicios web de terceros. No se utilizan cookies ni tecnologías de seguimiento.</p>
+        <div class="highlight-box">
+            <strong>Resumen de Privacidad:</strong> Nuestro visual está diseñado bajo el principio de "Privacidad por Defecto". No recolectamos datos fuera de su infraestructura de Microsoft.
+        </div>
 
-    <h2>4. Seguridad</h2>
-    <p>El Visual cumple con los estándares de seguridad de Microsoft para objetos visuales personalizados, operando dentro del sandbox seguro proporcionado por Power BI.</p>
+        <h2>1. Recopilación de Datos</h2>
+        <p>El Visual <strong>no recopila, almacena ni transmite</strong> ningún tipo de información personal, datos identificables o datos del negocio del usuario fuera del entorno seguro de Microsoft Power BI.</p>
 
-    <h2>5. Contacto</h2>
-    <p>Si tiene alguna pregunta sobre esta política de privacidad o el funcionamiento del Visual, puede contactar al desarrollador a través de:</p>
-    <ul>
-        <li><strong>Email:</strong> juancito.pena@hotmail.com</li>
-        <li><strong>Soporte:</strong> https://health-score-cartera-kpi.vercel.app/</li>
-    </ul>
+        <h2>2. Procesamiento de Datos</h2>
+        <p>Todos los cálculos realizados por el Visual se ejecutan estrictamente en la memoria local del dispositivo del usuario. El acceso a los datos del modelo se utiliza exclusivamente para la representación gráfica de:</p>
+        <ul>
+            <li>Indicadores Gauge de rendimiento.</li>
+            <li>Tarjetas de estado de llenado líquido.</li>
+            <li>Etiquetas dinámicas de KPIS.</li>
+        </ul>
 
-    <div class="footer">
-        &copy; 2026 Ing. Juancito Peña Vizcaíno. Todos los derechos reservados.
+        <h2>3. Servicios de Terceros</h2>
+        <p>El Visual es una solución aislada. No realiza llamadas a APIs externas, no utiliza cookies de seguimiento y no se conecta con servicios web de terceros.</p>
+
+        <h2>4. Estándares de Seguridad</h2>
+        <p>Esta solución cumple con los requisitos de certificación de Microsoft AppSource, operando dentro del <strong>sandbox seguro</strong> (aislamiento) que proporciona Power BI, garantizando que el visual no tenga acceso a recursos del sistema o de red no autorizados.</p>
+
+        <h2>5. Contacto y Transparencia</h2>
+        <p>Para cualquier consulta técnica o aclaración sobre esta política, puede dirigirse a los canales oficiales:</p>
+        
+        <ul class="contact-info">
+            <li><i class="fa-solid fa-envelope" style="color:var(--accent)"></i> <strong>Email:</strong> juancito.pena@hotmail.com</li>
+            <li><i class="fa-solid fa-globe" style="color:var(--accent)"></i> <strong>Web de Soporte:</strong> https://health-score-cartera-kpi.vercel.app/</li>
+        </ul>
+
+        <footer>
+            &copy; 2026 Ing. Juancito Peña Vizcaíno. <br>
+            Desarrollo de Visualizaciones Avanzadas para Business Intelligence.
+        </footer>
     </div>
+
 </body>
 </html>
