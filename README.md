@@ -1,13 +1,16 @@
 # 🦖 Health Score Cartera KPI 🚀
 
-![img](Screenshot_778.png)
+![img](img/Screenshot_778.png)
 
-> **Potencia tu análisis financiero:** Visual de alto rendimiento diseñado para Dashboards Ejecutivos. Muestra el estado de la cartera (💚 Saludable, 🟡 Riesgo, 🔴 Crítica) mediante un Gauge animado y tarjetas de llenado líquido de última generación.
+> **Potencia tu análisis financiero:**  
+> Visual de alto rendimiento diseñado para **Dashboards Ejecutivos**.  
+> Muestra el estado de la cartera (💚 Saludable, 🟡 Riesgo, 🔴 Crítica) mediante un **Gauge animado** y **tarjetas de llenado líquido** de última generación.
 
 ---
 
 ## 📊 Vista Previa del Visual
-![img](Screenshot_779.png)
+![img](img/Screenshot_779.png)
+
 
 
 ---
