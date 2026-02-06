@@ -20,33 +20,6 @@ Garantizamos que ninguna información sensible es transmitida a servidores exter
 
 ---
 
-## 🛠️ Guía de Publicación en Microsoft AppSource
-
-### PASO 0: Preparación de Requisitos
-1. **Icono:** PNG de `20x20` píxeles.
-2. **Captura:** Imagen de `1366 x 768` px.
-3. **Links:** URL de Privacidad y Soporte (puedes usar este repositorio).
-
-### PASO 1: Registro
-Ve al [Partner Center](https://partner.microsoft.com/dashboard/registration) y regístrate en el programa **Commercial Marketplace**.
-
-### PASO 2: Crear Oferta
-- **Tipo:** Power BI Visual.
-- **Offer ID:** `cartera_health_master`
-- **Alias:** `Cartera Health Master`
-
-### PASO 3: Detalles y Carga
-- **Paquete:** Sube el archivo `.pbiviz` de la carpeta `/dist`.
-- **Categoría:** KPI y Gauges.
-- **Descripción:** Copia el texto informativo de la sección superior.
-
-### PASO 4: Publicación
-Haz clic en **Review and publish**. Microsoft revisará el visual en un lapso de 1 a 3 días hábiles.
-
-![Panel de Partner Center](PON_AQUI_UNA_IMAGEN_DE_REFERENCIA_DEL_PROCESO)
-
----
-
 ## 🎧 Canales de Soporte Técnico
 ¿Tienes preguntas o necesitas una personalización? Estamos listos para ayudarte:
 
