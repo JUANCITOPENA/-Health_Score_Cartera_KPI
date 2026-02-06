@@ -104,6 +104,31 @@
             margin-bottom: 5px;
         }
 
+        /* Estilo para el botón de política */
+        .btn-privacy {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .btn-privacy i {
+            margin-right: 8px;
+        }
+
+        .btn-privacy:hover {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
         /* Grid de Contactos Estilo Botones App */
         .contact-grid {
             display: grid;
@@ -233,6 +258,11 @@
         <div class="privacy-card">
             <p><strong>Declaración oficial de seguridad:</strong> Este visual no recolecta ni envía datos del usuario fuera de Power BI. Todos los datos se procesan localmente en el dispositivo del usuario de forma segura dentro del ecosistema de Microsoft.</p>
             <p style="font-size: 0.9rem; color: #605e5c; margin: 0;">Garantizamos que ninguna información sensible es transmitida a servidores externos, cumpliendo estrictamente con las normativas de Microsoft AppSource.</p>
+            
+            <!-- Botón de acceso a política detallada -->
+            <a href="privacy.html" class="btn-privacy">
+                <i class="fa-solid fa-file-shield"></i> Leer Política de Privacidad Completa
+            </a>
         </div>
 
         <h2><i class="fa-solid fa-headset"></i> Canales de Soporte Técnico</h2>
