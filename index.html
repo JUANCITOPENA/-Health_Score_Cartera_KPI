@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarteraHealthMaster - Soporte y Privacidad</title>
+    <!-- Iconos Profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0078d4;
+            --primary-dark: #005a9e;
+            --bg: #f8f9fa;
+            --card-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* Brand Colors */
+            --whatsapp: #25D366;
+            --linkedin: #0077B5;
+            --email: #d93025;
+            --github: #24292e;
+            --youtube: #ff0000;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: #323130;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 850px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Header Moderno */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Contenido */
+        .content {
+            padding: 40px;
+        }
+
+        .hero-text {
+            font-size: 1.15rem;
+            color: #444;
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Tarjeta de Privacidad */
+        .privacy-card {
+            background: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+
+        .privacy-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0,120,212,0.1);
+        }
+
+        .privacy-card strong {
+            color: #000;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Grid de Contactos Estilo Botones App */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+        }
+
+        .contact-card {
+            text-decoration: none;
+            color: #323130;
+            background: #fff;
+            border: 1px solid #edebe9;
+            padding: 18px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .contact-card i {
+            font-size: 1.6rem;
+            margin-right: 15px;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: transparent;
+        }
+
+        /* Hover states por marca */
+        .contact-card.ws:hover { background: #e8faee; color: var(--whatsapp); }
+        .contact-card.li:hover { background: #e6f2f9; color: var(--linkedin); }
+        .contact-card.em:hover { background: #fdf2f1; color: var(--email); }
+        .contact-card.gh:hover { background: #f6f8fa; color: var(--github); }
+        .contact-card.yt:hover { background: #fff0f0; color: var(--youtube); }
+
+        .contact-card i.fa-whatsapp { color: var(--whatsapp); }
+        .contact-card i.fa-linkedin { color: var(--linkedin); }
+        .contact-card i.fa-envelope { color: var(--email); }
+        .contact-card i.fa-github { color: var(--github); }
+        .contact-card i.fa-youtube { color: var(--youtube); }
+
+        /* Bio del Autor Premium */
+        .author-box {
+            background: #faf9f8;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            border-top: 1px solid #edebe9;
+        }
+
+        .author-img-container {
+            position: relative;
+        }
+
+        .author-box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .author-box img:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        .author-info h3 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+        }
+
+        .author-info p {
+            margin: 5px 0;
+            color: #605e5c;
+        }
+
+        .badge-dev {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #fff;
+            color: #a19f9d;
+            font-size: 0.85rem;
+            border-top: 1px solid #f3f2f1;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .author-box { flex-direction: column; text-align: center; }
+            .content { padding: 25px; }
+            header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🦖 Health Score Cartera KPI 🚀</h1>
+    </header>
+
+    <div class="content">
+        <div class="hero-text">
+            <strong>Potencia tu análisis financiero:</strong> Visual de alto rendimiento diseñado para Dashboards Ejecutivos. Muestra el estado de la cartera (💚 Saludable, 🟡 Riesgo, 🔴 Crítica) mediante un Gauge animado y tarjetas de llenado líquido de última generación.
+        </div>
+
+        <h2><i class="fa-solid fa-user-shield"></i> Política de Privacidad</h2>
+        <div class="privacy-card">
+            <p><strong>Declaración oficial de seguridad:</strong> Este visual no recolecta ni envía datos del usuario fuera de Power BI. Todos los datos se procesan localmente en el dispositivo del usuario de forma segura dentro del ecosistema de Microsoft.</p>
+            <p style="font-size: 0.9rem; color: #605e5c; margin: 0;">Garantizamos que ninguna información sensible es transmitida a servidores externos, cumpliendo estrictamente con las normativas de Microsoft AppSource.</p>
+        </div>
+
+        <h2><i class="fa-solid fa-headset"></i> Canales de Soporte Técnico</h2>
+        <p style="margin-bottom: 25px; color: #605e5c;">¿Tienes preguntas o necesitas una personalización? Estamos listos para ayudarte:</p>
+        
+        <div class="contact-grid">
+            <a href="https://wa.me/18098706366" class="contact-card ws" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Directo
+            </a>
+            
+            <a href="https://www.linkedin.com/in/juancitopeña/" class="contact-card li" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> Perfil Profesional
+            </a>
+
+            <a href="mailto:juancito.pena@hotmail.com" class="contact-card em">
+                <i class="fa-solid fa-envelope"></i> Soporte vía Email
+            </a>
+
+            <a href="https://github.com/juancitopena" class="contact-card gh" target="_blank">
+                <i class="fa-brands fa-github"></i> Repositorio GitHub
+            </a>
+
+            <a href="https://www.youtube.com/@juancitopena" class="contact-card yt" target="_blank">
+                <i class="fa-brands fa-youtube"></i> Video Tutoriales
+            </a>
+        </div>
+    </div>
+
+    <div class="author-box">
+        <div class="author-img-container">
+            <img src="https://avatars.githubusercontent.com/u/38921558?v=4" alt="Ing. Juancito Peña Vizcaíno">
+        </div>
+        <div class="author-info">
+            <span class="badge-dev">Lead Developer & Mentor</span>
+            <h3>Ing. Juancito Peña Vizcaíno 🦖</h3>
+            <p><strong>Arquitecto educativo | Líder tecnológico</strong></p>
+            <p>Especialista en dashboards de alto impacto, automatización de procesos y formación de equipos de datos.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 CarteraHealthMaster | Diseñado con excelencia por Ing. Juancito Peña Vizcaíno
+    </footer>
+</div>
+
+</body>
+</html>
