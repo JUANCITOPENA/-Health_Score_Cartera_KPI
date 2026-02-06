@@ -1,69 +1,80 @@
-# 🦖 Health Score Cartera KPI - Power BI Visual 🚀
+# 🦖 Health Score Cartera KPI 🚀
 
-![Banner Principal](AQUÍ_LINK_A_UNA_IMAGEN_DEL_BANNER_O_CABECERA)
+![Banner Principal - Cartera Health Master](PON_AQUI_EL_LINK_DE_TU_BANNER_HORIZONTAL)
 
-Visualización de alto rendimiento diseñada para la gestión financiera ejecutiva. Este componente permite visualizar la salud de la cartera de cobros mediante indicadores animados y semaforización inteligente.
-
-## 📊 Vista Previa
-![Screenshot del Visual en Acción](AQUÍ_LINK_A_TU_SCREENSHOT_1366x768)
+> **Potencia tu análisis financiero:** Visual de alto rendimiento diseñado para Dashboards Ejecutivos. Muestra el estado de la cartera (💚 Saludable, 🟡 Riesgo, 🔴 Crítica) mediante un Gauge animado y tarjetas de llenado líquido de última generación.
 
 ---
 
-## 📜 Guía de Publicación en Microsoft AppSource
+## 📊 Vista Previa del Visual
+![Captura de pantalla del Visual funcionando](PON_AQUI_EL_LINK_DE_TU_SCREENSHOT_1366x768)
 
-Esta guía documenta el proceso para publicar este visual en la tienda oficial de Microsoft.
+---
 
-### 🛠️ Paso 0: Requisitos Previos
-Para la aprobación oficial, se requieren los siguientes activos:
-
-1. **Icono Oficial:** PNG de exactamente `20x20` píxeles.
-2. **Captura de Pantalla:** Recomendado `1366 x 768` px mostrando el visual con datos reales.
-3. **Privacidad y Soporte:** Enlaces válidos a la política de seguridad y contacto técnico.
+## 📜 Política de Privacidad
 
 > [!IMPORTANT]
-> **Privacidad:** Este visual procesa los datos 100% de forma local. No hay transmisión externa de información.
+> **Declaración oficial de seguridad:** Este visual no recolecta ni envía datos del usuario fuera de Power BI. Todos los datos se procesan localmente en el dispositivo del usuario de forma segura dentro del ecosistema de Microsoft.
+
+Garantizamos que ninguna información sensible es transmitida a servidores externos, cumpliendo estrictamente con las normativas de **Microsoft AppSource**.
 
 ---
 
-### 🚀 Proceso de Publicación
+## 🛠️ Guía de Publicación en Microsoft AppSource
 
-#### 1. Registro en Partner Center
-Acceda al [Microsoft Partner Center](https://partner.microsoft.com/dashboard/registration) e inscríbase en el programa **Commercial Marketplace**.
+### PASO 0: Preparación de Requisitos
+1. **Icono:** PNG de `20x20` píxeles.
+2. **Captura:** Imagen de `1366 x 768` px.
+3. **Links:** URL de Privacidad y Soporte (puedes usar este repositorio).
 
-#### 2. Configuración de la Oferta
-- **Tipo de Oferta:** Power BI Visual.
+### PASO 1: Registro
+Ve al [Partner Center](https://partner.microsoft.com/dashboard/registration) y regístrate en el programa **Commercial Marketplace**.
+
+### PASO 2: Crear Oferta
+- **Tipo:** Power BI Visual.
 - **Offer ID:** `cartera_health_master`
-- **Paquete:** Subir el archivo compilado `.pbiviz` localizado en la carpeta `/dist`.
+- **Alias:** `Cartera Health Master`
 
-#### 3. Detalles del Listado
-- **Categoría:** KPI / Gauges.
-- **Descripción:** "Tome el control de su flujo de caja con este visual ejecutivo. Health Score Cartera permite visualizar instantáneamente la salud de sus cobros clasificándolos en Zonas (Crítica, Riesgo, Saludable)."
+### PASO 3: Detalles y Carga
+- **Paquete:** Sube el archivo `.pbiviz` de la carpeta `/dist`.
+- **Categoría:** KPI y Gauges.
+- **Descripción:** Copia el texto informativo de la sección superior.
 
-![Imagen del Panel de Configuración](AQUÍ_LINK_A_UNA_IMAGEN_DE_REFERENCIA_DE_PARTNER_CENTER)
+### PASO 4: Publicación
+Haz clic en **Review and publish**. Microsoft revisará el visual en un lapso de 1 a 3 días hábiles.
 
----
-
-## 🛠️ Especificaciones Técnicas
-- **GUID:** `CarteraHealthMaster_Final_PBI_2026`
-- **Versión:** `1.0.0`
-- **Tecnologías:** TypeScript, D3.js, Power BI Visuals SDK.
+![Panel de Partner Center](PON_AQUI_UNA_IMAGEN_DE_REFERENCIA_DEL_PROCESO)
 
 ---
 
-## 📞 Soporte y Comunidad
+## 🎧 Canales de Soporte Técnico
+¿Tienes preguntas o necesitas una personalización? Estamos listos para ayudarte:
 
-Si necesitas asistencia técnica o personalizaciones a medida:
-
-*   **WhatsApp:** [+1 809-870-6366](https://wa.me/18098706366)
-*   **LinkedIn:** [Ing. Juancito Peña Vizcaíno](https://www.linkedin.com/in/juancitopeña/)
-*   **YouTube:** [Canal de Tutoriales](https://www.youtube.com/@juancitopena)
-*   **Email:** juancito.pena@hotmail.com
+| Canal | Enlace |
+| :--- | :--- |
+| 📱 **WhatsApp** | [Chat Directo](https://wa.me/18098706366) |
+| 🔗 **LinkedIn** | [Perfil Profesional](https://www.linkedin.com/in/juancitopeña/) |
+| 📧 **Email** | [juancito.pena@hotmail.com](mailto:juancito.pena@hotmail.com) |
+| 🐙 **GitHub** | [Reportar un Problema](https://github.com/juancitopena) |
+| 📺 **YouTube** | [Video Tutoriales](https://www.youtube.com/@juancitopena) |
 
 ---
 
-## 👨‍💻 Desarrollado por
-![Foto Juancito Peña](https://avatars.githubusercontent.com/u/38921558?v=4&s=100)
-**Ing. Juancito Peña Vizcaíno**  
-*Arquitecto Tecnológico | Mentor Profesional | Experto en Datos*
+## 👨‍💻 Desarrollado por:
 
-© 2026 CarteraHealthMaster
+<table border="0">
+  <tr>
+    <td width="130">
+      <img src="https://avatars.githubusercontent.com/u/38921558?v=4" width="120" style="border-radius:50%">
+    </td>
+    <td>
+      <strong>Ing. Juancito Peña Vizcaíno 🦖</strong><br>
+      <em>Lead Developer & Mentor</em><br>
+      Arquitecto educativo | Líder tecnológico<br>
+      Especialista en dashboards de alto impacto y análisis de datos.
+    </td>
+  </tr>
+</table>
+
+---
+© 2026 **CarteraHealthMaster** | Diseñado con excelencia por Ing. Juancito Peña Vizcaíno
