@@ -1,6 +1,6 @@
 # 🦖 Health Score Cartera KPI 🚀
 
-![img](img/Screenshot_778.png)
+![](Screenshot_778.png)
 
 > **Potencia tu análisis financiero:**  
 > Visual de alto rendimiento diseñado para **Dashboards Ejecutivos**.  
@@ -9,7 +9,7 @@
 ---
 
 ## 📊 Vista Previa del Visual
-![img](img/Screenshot_779.png)
+![](Screenshot_779.png)
 
 
 
