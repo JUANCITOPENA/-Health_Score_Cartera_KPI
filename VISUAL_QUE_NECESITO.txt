@@ -1,0 +1,122 @@
+Cartera_Health_Final_Card = 
+-- 1. VARIABLES DE DATOS
+VAR _Total = [Monto Facturado USD]
+VAR _Cobrado = [Monto Cobrado USD]
+VAR _Vigente = [Monto Por Vencer USD]
+VAR _Vencido = [Monto Vencido USD]
+
+-- 2. CÁLCULO DE PORCENTAJES COHERENTES (Asegura suma 100%)
+VAR _PctCobrado = DIVIDE(_Cobrado, _Total, 0)
+VAR _PctVigente = DIVIDE(_Vigente, _Total, 0)
+VAR _PctVencido = DIVIDE(_Vencido, _Total, 0)
+
+-- 3. COLORES PROFESIONALES
+VAR _ColRojo = "#E15759"      
+VAR _ColAmarillo = "#EDC948"  
+VAR _ColVerde = "#59A14F"    
+VAR _ColDark = "#1B263B"     
+VAR _ColGrisFondo = "#F1F5F9" 
+VAR _ColGrisSub = "#94A3B8"   
+
+-- 4. LÓGICA DE AGUJA (Basada en la eficiencia de cobro)
+VAR _Eficiencia = MIN(MAX(_PctCobrado, 0), 1)
+VAR _Grados = (_Eficiencia * 180) - 90
+VAR _ColorMain = SWITCH(TRUE(), _PctCobrado < 0.60, _ColRojo, _PctCobrado < 0.85, _ColAmarillo, _ColVerde)
+VAR _TextoZona = SWITCH(TRUE(), _PctCobrado < 0.60, "ZONA CRÍTICA", _PctCobrado < 0.85, "ZONA DE RIESGO", "ZONA SALUDABLE")
+
+-- 5. FORMATO SVG
+VAR _Rotacion = SUBSTITUTE(FORMAT(_Grados, "0.0"), ",", ".")
+-- El valor 24 es el alto del contenedor del icono circular
+VAR _FillCob = SUBSTITUTE(FORMAT(24 * (1 - _PctCobrado), "0.0"), ",", ".")
+VAR _FillVig = SUBSTITUTE(FORMAT(24 * (1 - _PctVigente), "0.0"), ",", ".")
+VAR _FillVen = SUBSTITUTE(FORMAT(24 * (1 - _PctVencido), "0.0"), ",", ".")
+
+RETURN
+"
+<style>
+    .container-card { transition: all 0.3s ease; }
+    .container-card:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
+    .kpi-box { transition: all 0.2s ease; }
+    .kpi-box:hover { background: #f8fafc; transform: scale(1.03); }
+</style>
+
+<div class='container-card' style='font-family: Segoe UI, Arial; background: white; padding: 20px; border-radius: 20px; width: 400px; margin: auto; color: " & _ColDark & ";'>
+    
+    <div style='text-align: center; font-size: 13px; font-weight: 900; color: #64748B; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;'>
+        Health Score de Cartera
+    </div>
+
+    <div style='position: relative; width: 320px; height: 160px; margin: 0 auto;'>
+        <svg viewBox='0 0 300 150' style='overflow: visible;'>
+            
+            <path d='M 30 150 A 120 120 0 0 1 187.1 35.9' fill='none' stroke='" & _ColRojo & "' stroke-width='25' />
+            <path d='M 187.1 35.9 A 120 120 0 0 1 256.9 95.5' fill='none' stroke='" & _ColAmarillo & "' stroke-width='25' />
+            <path d='M 256.9 95.5 A 120 120 0 0 1 270 150' fill='none' stroke='" & _ColVerde & "' stroke-width='25' />
+
+            <text x='15' y='165' font-size='10' fill='" & _ColGrisSub & "' font-weight='bold' text-anchor='middle'>0%</text>
+            
+            <text x='187' y='18' font-size='10' fill='" & _ColGrisSub & "' font-weight='bold' text-anchor='middle'>60%</text>
+            
+            <text x='275' y='85' font-size='10' fill='" & _ColGrisSub & "' font-weight='bold' text-anchor='start'>85%</text>
+            <text x='285' y='165' font-size='10' fill='" & _ColGrisSub & "' font-weight='bold' text-anchor='middle'>100%</text>
+
+            <g transform='translate(150, 150)'>
+                <g transform='rotate(" & _Rotacion & ")'>
+                    <path d='M -4 0 L 0 -115 L 4 0 Z' fill='" & _ColDark & "' />
+                    <circle cx='0' cy='0' r='8' fill='white' stroke='" & _ColDark & "' stroke-width='4' />
+                </g>
+            </g>
+        </svg>
+
+        <div style='position: absolute; top: 90px; left: 50%; transform: translateX(-50%); background: white; padding: 12px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 165px; text-align: center; border: 1px solid #F1F5F9;'>
+            <div style='font-size: 48px; font-weight: 900; color: " & _ColorMain & "; line-height: 0.8;'>" & FORMAT(_Eficiencia, "0%") & "</div>
+            <div style='font-size: 11px; font-weight: 800; color: #4E5D6C; margin-top: 8px;'>" & _TextoZona & "</div>
+        </div>
+    </div>
+
+    <div style='text-align: center; margin-top: 50px;'>
+        <div style='font-size: 38px; font-weight: 900; color: #1B263B; letter-spacing: -1px;'>$ " & FORMAT(_Total, "#,0") & "</div>
+        <div style='font-size: 11px; color: " & _ColGrisSub & "; font-weight: 700; text-transform: uppercase;'>Total Cartera Gestionada</div>
+    </div>
+
+    <div style='display: flex; justify-content: space-between; gap: 8px; margin-top: 25px;'>
+        
+        <div class='kpi-box' style='flex:1; border: 1px solid #F1F5F9; border-radius: 15px; padding: 12px 5px; text-align: center;'>
+            <div style='font-size: 16px; font-weight: 900; color:" & _ColVerde & ";'>" & FORMAT(_PctCobrado, "0.0%") & "</div>
+            <svg width='32' height='32' viewBox='0 0 24 24' style='margin: 5px auto;'>
+                <circle cx='12' cy='12' r='11' fill='" & _ColGrisFondo & "' />
+                <clipPath id='c1'><rect x='0' y='" & _FillCob & "' width='24' height='24' /></clipPath>
+                <circle cx='12' cy='12' r='11' fill='" & _ColVerde & "' clip-path='url(#c1)' />
+                <text x='12' y='17' font-size='14' font-weight='900' fill='white' text-anchor='middle'>!</text>
+            </svg>
+            <div style='font-size: 10px; font-weight: 800;'>$ " & FORMAT(_Cobrado, "#,0") & "</div>
+            <div style='font-size: 8px; color:" & _ColGrisSub & "; font-weight: 800;'>COBRADO</div>
+        </div>
+
+        <div class='kpi-box' style='flex:1; border: 1px solid #F1F5F9; border-radius: 15px; padding: 12px 5px; text-align: center;'>
+            <div style='font-size: 16px; font-weight: 900; color:" & _ColAmarillo & ";'>" & FORMAT(_PctVigente, "0.0%") & "</div>
+            <svg width='32' height='32' viewBox='0 0 24 24' style='margin: 5px auto;'>
+                <circle cx='12' cy='12' r='11' fill='" & _ColGrisFondo & "' />
+                <clipPath id='c2'><rect x='0' y='" & _FillVig & "' width='24' height='24' /></clipPath>
+                <circle cx='12' cy='12' r='11' fill='" & _ColAmarillo & "' clip-path='url(#c2)' />
+                <text x='12' y='17' font-size='14' font-weight='900' fill='white' text-anchor='middle'>!</text>
+            </svg>
+            <div style='font-size: 10px; font-weight: 800;'>$ " & FORMAT(_Vigente, "#,0") & "</div>
+            <div style='font-size: 8px; color:" & _ColGrisSub & "; font-weight: 800;'>VIGENTE</div>
+        </div>
+
+        <div class='kpi-box' style='flex:1; border: 1px solid #F1F5F9; border-radius: 15px; padding: 12px 5px; text-align: center;'>
+            <div style='font-size: 16px; font-weight: 900; color:" & _ColRojo & ";'>" & FORMAT(_PctVencido, "0.0%") & "</div>
+            <svg width='32' height='32' viewBox='0 0 24 24' style='margin: 5px auto;'>
+                <circle cx='12' cy='12' r='11' fill='" & _ColGrisFondo & "' />
+                <clipPath id='c3'><rect x='0' y='" & _FillVen & "' width='24' height='24' /></clipPath>
+                <circle cx='12' cy='12' r='11' fill='" & _ColRojo & "' clip-path='url(#c3)' />
+                <text x='12' y='17' font-size='14' font-weight='900' fill='white' text-anchor='middle'>!</text>
+            </svg>
+            <div style='font-size: 10px; font-weight: 800;'>$ " & FORMAT(_Vencido, "#,0") & "</div>
+            <div style='font-size: 8px; color:" & _ColGrisSub & "; font-weight: 800;'>VENCIDO</div>
+        </div>
+
+    </div>
+</div>
+"

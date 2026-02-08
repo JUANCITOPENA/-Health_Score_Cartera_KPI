@@ -1,0 +1,20 @@
+{
+  "Role_Total": "Monto Total",
+  "Role_Collected": "Monto Cobrado",
+  "Role_Overdue": "Monto Vencido",
+  "Role_Due": "Monto Por Vencer",
+  "Role_PctCollected": "% Cobrado (Opc)",
+  "Role_PctOverdue": "% Vencido (Opc)",
+  "Role_PctDue": "% Por Vencer (Opc)",
+  "Visual_Title": "Health Score de Cartera",
+  "Visual_TotalLabel": "Total Cartera Gestionada",
+  "Status_Healthy": "ZONA SALUDABLE",
+  "Status_Risk": "ZONA DE RIESGO",
+  "Status_Critical": "ZONA CRÍTICA",
+  "Label_Collected": "Cobrado",
+  "Label_Overdue": "Vencido",
+  "Label_Due": "Vigente",
+  "Prop_Thickness": "Grosor del Arco",
+  "Prop_ThresholdWarn": "Umbral de Alerta (%)",
+  "Prop_Animation": "Animación"
+}

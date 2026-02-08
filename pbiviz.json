@@ -1,0 +1,25 @@
+{
+  "visual": {
+    "name": "CarteraHealthMaster",
+    "displayName": "Health Score Cartera KPI",
+    "guid": "CarteraHealthMaster_Final_PBI_2026",
+    "visualClassName": "Visual",
+    "version": "1.0.0",
+    "description": "Visual de alto rendimiento para gestión financiera. Muestra el estado de la cartera mediante un Gauge animado y tarjetas de llenado líquido. Ideal para Dashboards Ejecutivos.",
+    "supportUrl": "https://health-score-cartera-kpi.vercel.app/",
+    "gitHubUrl": "https://github.com/JUANCITOPENA/-Health_Score_Cartera_KPI"
+  },
+  "apiVersion": "5.3.0",
+  "author": {
+    "name": "Ing. Juancito Pena Vizcaino",
+    "email": "juancito.pena@hotmail.com"
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "externalJS": [],
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": null,
+  "stringResources": []
+}

@@ -1,0 +1,82 @@
+{
+  "dataRoles": [
+    {
+      "displayName": "Monto Total (Meta/Total)",
+      "name": "amountTotal",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Monto Cobrado",
+      "name": "amountCollected",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Monto Vencido",
+      "name": "amountOverdue",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Monto Por Vencer",
+      "name": "amountDue",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "% Cobrado (Opcional)",
+      "name": "pctCollected",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "% Vencido (Opcional)",
+      "name": "pctOverdue",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "% Por Vencer (Opcional)",
+      "name": "pctDue",
+      "kind": "Measure"
+    }
+  ],
+  "objects": {
+    "gaugeSettings": {
+      "properties": {
+        "arcThickness": {
+          "type": { "integer": true },
+          "displayName": "Grosor Arco"
+        },
+        "thresholdWarning": {
+          "type": { "numeric": true },
+          "displayName": "Umbral Alerta (%)"
+        }
+      }
+    }
+  },
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "amountTotal": { "max": 1 },
+          "amountCollected": { "max": 1 },
+          "amountOverdue": { "max": 1 },
+          "amountDue": { "max": 1 },
+          "pctCollected": { "max": 1 },
+          "pctOverdue": { "max": 1 },
+          "pctDue": { "max": 1 }
+        }
+      ],
+      "categorical": {
+        "values": {
+          "select": [
+            { "bind": { "to": "amountTotal" } },
+            { "bind": { "to": "amountCollected" } },
+            { "bind": { "to": "amountOverdue" } },
+            { "bind": { "to": "amountDue" } },
+            { "bind": { "to": "pctCollected" } },
+            { "bind": { "to": "pctOverdue" } },
+            { "bind": { "to": "pctDue" } }
+          ]
+        }
+      }
+    }
+  ],
+  "privileges": []
+}

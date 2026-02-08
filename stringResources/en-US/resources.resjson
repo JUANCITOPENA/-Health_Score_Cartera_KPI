@@ -1,0 +1,20 @@
+{
+  "Role_Total": "Total Amount",
+  "Role_Collected": "Collected Amount",
+  "Role_Overdue": "Overdue Amount",
+  "Role_Due": "Due Amount",
+  "Role_PctCollected": "% Collected (Opt)",
+  "Role_PctOverdue": "% Overdue (Opt)",
+  "Role_PctDue": "% Due (Opt)",
+  "Visual_Title": "Portfolio Health Score",
+  "Visual_TotalLabel": "Total Managed Portfolio",
+  "Status_Healthy": "HEALTHY ZONE",
+  "Status_Risk": "RISK ZONE",
+  "Status_Critical": "CRITICAL ZONE",
+  "Label_Collected": "Collected",
+  "Label_Overdue": "Overdue",
+  "Label_Due": "Current",
+  "Prop_Thickness": "Arc Thickness",
+  "Prop_ThresholdWarn": "Warning Threshold (%)",
+  "Prop_Animation": "Animation"
+}

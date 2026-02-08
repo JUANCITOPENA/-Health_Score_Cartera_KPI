@@ -1,0 +1,19 @@
+{
+    "extends": "tslint-microsoft-contrib/recommended",
+    "rulesDirectory": [
+        "node_modules/tslint-microsoft-contrib"
+    ],
+    "rules": {
+        "no-relative-imports": false,
+        "no-inner-html": false,
+        "insecure-random": false,
+        "max-func-body-length": false,
+        "function-name": false,
+        "missing-jsdoc": false,
+        "no-any": false,
+        "typedef": false,
+        "no-string-literal": false,
+        "no-backbone-get-set-outside-model": false,
+        "prefer-function-over-method": false
+    }
+}
