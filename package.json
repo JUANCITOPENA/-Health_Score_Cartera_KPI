@@ -1,6 +1,6 @@
 {
   "name": "cartera-health-master",
-  "version": "1.0.0",
+  "version": "1.0.0.0",
   "description": "Visual de alto rendimiento para gestión financiera. Muestra el estado de la cartera (Saludable, Riesgo, Crítica) mediante un Gauge animado y tarjetas de llenado líquido.",
   "repository": {
     "type": "default_template_value",
@@ -18,7 +18,7 @@
     "@babel/runtime-corejs2": "7.6.0",
     "core-js": "^3.18.1",
     "d3": "^5.16.0",
-    "powerbi-visuals-api": "~5.3.0",
+    "powerbi-visuals-api": "~5.10.0",
     "powerbi-visuals-utils-dataviewutils": "2.2.1",
     "powerbi-visuals-utils-formattingutils": "^6.1.2"
   },
